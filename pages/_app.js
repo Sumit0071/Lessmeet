@@ -1,5 +1,11 @@
 import "@/styles/globals.css";
 
-export default function App({ Component, pageProps }) {
-  return <Component {...pageProps} />;
+import { SocketProvider } from "@/context/socket";
+
+export default function App( { Component, pageProps } ) {
+  return (
+    <SocketProvider>
+      <Component {...pageProps} />
+    </SocketProvider>
+  );
 }
