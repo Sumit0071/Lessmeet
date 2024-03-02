@@ -1,11 +1,18 @@
-import Image from "next/image";
-import { Inter } from "next/font/google";
 
-const inter = Inter( { subsets: ["latin"] } );
-
+import { useSocket } from "@/context/socket";
+import { useEffect } from "react";
 export default function Home() {
+  const socket = useSocket();
+
+  useEffect( () => {
+    socket?.on( "conect", () => {
+      console.log( socket.id );
+    } );
+  }, [socket] );
+
   return (
     <main>
-      Hello
-    </main> );
+      welcome
+    </main>
+  );
 }
