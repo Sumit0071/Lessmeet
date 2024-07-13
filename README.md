@@ -19,4 +19,4 @@ It doesn't ensure the data will reach the desitination because of losing of pack
 </div>
 
 #NOTE
-<h2>For running this applicatio the devices should be connected via the same network(wifi) </h2>
+<h2>For running this application the devices should be connected via the same network(wifi) </h2>
