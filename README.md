@@ -18,6 +18,7 @@ It doesn't ensure the data will reach the desitination because of losing of pack
 <img src='./images/WebRTC workflow 2.png'>
 </div>
 <h2>Just a quick overview what we'll be building</h2>
-<iframe width="560" height="315" src="https://youtu.be/iySlcTykk9o?si=so_muBtl-kgEVJwC" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[Watch the video on YouTube](https://youtu.be/iySlcTykk9o?si=so_muBtl-kgEVJwC)
+
 #NOTE
 <h2>For running this application the devices should be connected via the same network(wifi) </h2>
