@@ -6,28 +6,30 @@ import { useState } from 'react';
 
 export default function Home() {
   const router = useRouter()
-  const [roomId, setRoomId] = useState('')
+  const [roomId, setRoomId] = useState( '' )
 
   const createAndJoin = () => {
     const roomId = uuidv4()
-    router.push(`/${roomId}`)
+    router.push( `/${roomId}` )
   }
 
   const joinRoom = () => {
-    if (roomId) router.push(`/${roomId}`)
+    if ( roomId ) router.push( `/${roomId}` )
     else {
-      alert("Please provide a valid room id")
+      alert( "Please provide a valid room id" )
     }
   }
   return (
-    <div className={styles.homeContainer}>
-        <h1>Google Meet Clone</h1>
+    
+      <div className={styles.homeContainer}>
+        <h1>LessMeet</h1>
         <div className={styles.enterRoom}>
-          <input placeholder='Enter Room ID' value={roomId} onChange={(e) => setRoomId(e?.target?.value)}/>
+          <input placeholder='Enter Room ID' value={roomId} onChange={( e ) => setRoomId( e?.target?.value )} />
           <button onClick={joinRoom}>Join Room</button>
         </div>
-        <span  className={styles.separatorText} >--------------- OR ---------------</span>
+        <span className={styles.separatorText} >--------------- OR ---------------</span>
         <button onClick={createAndJoin}>Create a new room</button>
-    </div>
+      </div>
+   
   )
 }

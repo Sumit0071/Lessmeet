@@ -1,27 +1,60 @@
 .playerContainer {
-  @apply relative overflow-hidden mb-5 h-full;
+  @apply relative overflow-hidden mb-5 h-full rounded-lg shadow-lg bg-gradient-to-b from-gray-800 to-gray-900;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.playerContainer:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
 }
 
 .active {
-  @apply rounded-lg;
+  @apply rounded-lg shadow-xl transition-transform duration-300 ease-in-out scale-105;
 }
 
 .notActive {
-  @apply rounded-md h-min;
-  width: 200px;
-  -webkit-box-shadow: 0px 0px 11px -1px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 0px 0px 11px -1px rgba(0, 0, 0, 0.75);
-  box-shadow: 0px 0px 11px -1px rgba(0, 0, 0, 0.75);
+  @apply rounded-md bg-gray-800 p-4 h-min flex flex-col items-center;
+  width: 180px;
+  box-shadow: 0px 4px 15px -3px rgba(0, 0, 0, 0.7);
 }
 
 .icon {
-  @apply text-white absolute right-2 bottom-2;
+  @apply text-white absolute right-3 bottom-3 p-2 rounded-full bg-gray-700 hover:bg-gray-600 shadow-md;
+  transition: background-color 0.3s ease-in-out, transform 0.2s ease;
+}
+
+.icon:hover {
+  transform: scale(1.1);
 }
 
 .user {
-  @apply text-white;
+  @apply text-white text-opacity-75;
+  filter: drop-shadow(0 2px 4px rgba(255, 255, 255, 0.2));
+  transition: transform 0.3s ease-in-out;
 }
 
 .notPlaying {
-  @apply flex items-center justify-center;
+  @apply flex items-center justify-center text-gray-500;
+  background: linear-gradient(135deg, #2b2b2b, #1a1a1a);
+  padding: 10px;
+}
+
+@media (max-width: 768px) {
+  .playerContainer {
+    @apply mb-4;
+    width: 100%;
+  }
+
+  .notActive {
+    @apply w-full flex-row justify-between p-2;
+  }
+
+  .icon {
+    @apply right-2 bottom-2;
+  }
+
+  .user {
+    transform: scale(0.8);
+  }
 }

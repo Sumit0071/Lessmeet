@@ -11,6 +11,7 @@ module.exports = {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+          'custom-bg': "url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOneqNCDvP3MY78lMScqXeobhXKIJQcngzYOIZy4iTy0CYZLr1WChVXRk&s')",
       },
       colors: {
         prime: '#212529',
