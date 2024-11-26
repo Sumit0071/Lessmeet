@@ -17,3 +17,8 @@ It doesn't ensure the data will reach the desitination because of losing of pack
 </section>
 <img src='./images/WebRTC workflow 2.png'>
 </div>
+<h2>Just a quick overview what we'll be building</h2>
+[Watch the video on YouTube](https://youtu.be/iySlcTykk9o?si=so_muBtl-kgEVJwC)
+
+#NOTE
+<h2>For running this application the devices should be connected via the same network(wifi) </h2>
