@@ -1,0 +1,17 @@
+.chatWindow {
+    height: 250px;
+    overflow-y: auto;
+    background: #f1f1f1;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  
+  .message {
+    margin-bottom: 5px;
+  }
+  
+  .user {
+    font-weight: bold;
+    margin-right: 5px;
+  }
+  

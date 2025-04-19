@@ -1,11 +1,13 @@
 import cx from "classnames";
-import { Mic, Video, PhoneOff, MicOff, VideoOff } from "lucide-react";
+import { Mic, Video, PhoneOff, MicOff, VideoOff, MessageSquare } from "lucide-react";
 
 import styles from "@/component/Bottom/index.module.css";
+import { useEffect, useState } from "react";
 
 const Bottom = ( props ) => {
-  const { muted, playing, toggleAudio, toggleVideo, leaveRoom } = props;
+  const { muted, playing, toggleAudio, toggleVideo, leaveRoom,toggleChat,showChat } = props;
 
+  
   return (
     <div className={styles.bottomMenu}>
       {muted ? (
@@ -26,6 +28,11 @@ const Bottom = ( props ) => {
           onClick={toggleVideo}
         />
       )}
+        <MessageSquare
+        className={cx( styles.icon,  {[styles.active]:showChat}  )}
+        size={55}
+        onClick={toggleChat}
+        />
       <PhoneOff size={55} className={cx( styles.icon )} onClick={leaveRoom} />
     </div>
   );
